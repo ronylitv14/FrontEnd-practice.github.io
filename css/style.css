@@ -98,6 +98,8 @@ ul {
 .button.filter {
   font-weight: 500;
   line-height: 1.62;
+
+  cursor: pointer;
 }
 
 .button.primary,
