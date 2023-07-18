@@ -1,0 +1,188 @@
+/* 
+Accent color -  #2196F3
+Main white - #FFFFFF
+Secondary text color - #757575
+Title color - #212121;
+
+Background color  - #2F303A; 
+Section background -  #F5F4FA;
+Logo color - #000000
+Address color - rgba(255, 255, 255, 0.60);
+*/
+
+:root {
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --sec-text-color: #757575;
+  --title-color: #212121;
+  --bg-color: #2f303a;
+  --sc-bg-color: #f5f4fa;
+  --logo-color: #000000;
+  --address-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  color: var(--title-color);
+  font-size: 14px;
+  font-family: Roboto;
+
+  background-color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Logo */
+
+.logo {
+  font-family: Raleway;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.17;
+}
+
+.logo.primary {
+  color: var(--logo-color);
+}
+
+.logo > span {
+  color: var(--accent-color);
+}
+
+.logo.secondary {
+  color: var(--white-color);
+}
+
+/* Site navigation */
+
+.link {
+  font-weight: 500;
+  line-height: 1.17;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+
+/* Hero */
+
+.hero {
+  background-color: var(--bg-color);
+}
+
+.hero-title {
+  color: var(--white-color);
+
+  text-align: center;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36; /* 136.364% */
+
+  text-transform: uppercase;
+}
+
+/* Button */
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88; /* 187.5% */
+}
+
+.button.filter {
+  font-weight: 500;
+  line-height: 1.62;
+}
+
+.button.primary,
+.button.filter:hover,
+.button.filter:focus {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+/* Company  traits */
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+}
+
+.trait .title {
+  font-weight: 700;
+  line-height: 1.14;
+
+  text-transform: uppercase;
+}
+
+.trait .text {
+  color: var(--sec-text-color);
+
+  font-weight: 400;
+  line-height: 1.71; /* 171.429% */
+}
+
+/* Our team */
+
+section.team {
+  background-color: var(--sc-bg-color);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.description > .name {
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.description > .position {
+  color: var(--sec-text-color);
+
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--bg-color);
+}
+
+address {
+  color: var(--white-color);
+}
+
+address > .link {
+  color: var(--address-color);
+
+  font-weight: 400;
+  line-height: 1.71; /* 171.429% */
+}
+
+/* Portfolio.hmtl */
+
+/* Products */
+
+.product .title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2; /* 200% */
+}
+
+.product .type {
+  color: var(--sec-text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.88; /* 187.5% */
+}
