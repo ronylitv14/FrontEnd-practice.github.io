@@ -45,7 +45,8 @@ h4,
 h3,
 h2,
 h1,
-p {
+p,
+span {
   margin: 0;
 }
 
@@ -64,14 +65,18 @@ figure {
   padding-left: 15px;
   padding-right: 15px;
 
-  outline: 2px dashed tomato;
+  /* outline: 2px dashed tomato; */
 }
 
 /* Sections */
 
 .section {
-  /* padding-top: 94px; */
+  padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.section.projects {
+  padding-top: 94px;
 }
 
 /* Page header */
@@ -131,11 +136,20 @@ figure {
   font-weight: 500;
   line-height: 1.17;
 }
-
+/* 
 .site-nav .link:hover,
 .site-nav .link:focus,
 .contact .link:hover,
 .contact .link:focus {
+  color: var(--accent-color);
+} */
+
+.link:visited {
+  color: var(--title-color);
+}
+
+.link:hover,
+.link:focus {
   color: var(--accent-color);
 }
 
@@ -235,6 +249,10 @@ figure {
   line-height: 1.71; /* 171.429% */
 }
 
+.trait a {
+  cursor: pointer;
+}
+
 /* Our team */
 
 section.team {
@@ -243,7 +261,6 @@ section.team {
 
 .members {
   display: flex;
-  padding-bottom: 94px;
 
   text-align: center;
 }
@@ -289,13 +306,17 @@ address {
   color: var(--white-color);
 }
 
-address > .link {
+.page-footer .link {
   display: block;
 
   color: var(--address-color);
 
   font-weight: 400;
   line-height: 1.71; /* 171.429% */
+}
+
+footer .logo {
+  margin-right: 0;
 }
 
 .page-footer {
@@ -320,7 +341,10 @@ address > .link {
 }
 
 .products .product {
+  width: 370px;
   flex-basis: calc((100% - 60px) / 3);
+
+  border: 1px solid #eee;
 }
 
 .product .text {
