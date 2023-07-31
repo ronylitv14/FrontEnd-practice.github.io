@@ -173,10 +173,6 @@ figure {
   text-transform: uppercase;
 }
 
-.hero a {
-  margin-bottom: 200px;
-}
-
 /* Button */
 
 .button {
@@ -228,8 +224,11 @@ figure {
 .traits {
   display: flex;
 }
+.traits .trait {
+  min-width: calc((100% - 90px) / 4);
+}
 
-.traits .trait:not(:last-child) {
+.traits > .trait:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -302,12 +301,22 @@ footer {
   background-color: var(--bg-color);
 }
 
-address {
+.page-footer .address {
   color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.address .item {
+  font-style: normal;
+}
+
+.address .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .page-footer .link {
-  display: block;
+  /* display: block; */
 
   color: var(--address-color);
 
@@ -317,6 +326,8 @@ address {
 
 footer .logo {
   margin-right: 0;
+
+  font-style: normal;
 }
 
 .page-footer {
@@ -344,11 +355,22 @@ footer .logo {
   width: 370px;
   flex-basis: calc((100% - 60px) / 3);
 
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
+}
+
+.product .image {
+  display: block;
 }
 
 .product .text {
-  margin: 20px 24px;
+  padding: 20px 24px;
+
+  min-width: 370px;
+
+  border: 1px solid #eee;
+
+  border-top-width: 0px;
+  border-top-style: none;
 }
 
 .product .title {
