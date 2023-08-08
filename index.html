@@ -25,9 +25,9 @@
         <nav class="main-nav">
           <a href="./index.html" class="logo primary"><span>Web</span>Studio</a>
           <ul class="site-nav">
-            <li class="item"><a href="./index.html" class="link">Studio</a></li>
+            <li class="item"><a href="./index.html" class="link" current>Studio</a></li>
             <li class="item"><a href="./portfolio.html" class="link">Portfolio</a></li>
-            <li class="item"><a href="./random.html" class="link">Contacts</a></li>
+            <li class="item"><a href="#" class="link">Contacts</a></li>
           </ul>
         </nav>
         <ul class="contact">
@@ -53,11 +53,11 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Effective solutions <br />for business</h1>
-        <a href="" class="button primary">Order services</a>
+        <button href="" class="button primary" data-modal-open>Order services</button>
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Personal qualities</h2>
+          <h2 class="section-title visually-hidden">Personal qualities</h2>
           <ul class="traits">
             <li class="trait">
               <div class="thumb">
@@ -116,12 +116,22 @@
           <ul class="features">
             <li class="feature">
               <img src="./images/img1.jpg" alt="Planning" width="370" />
+
+              <div class="thumb">
+                <p class="type">Desktop Apps</p>
+              </div>
             </li>
             <li class="feature">
               <img src="./images/img2.jpg" alt="Creating" width="370" />
+              <div class="thumb">
+                <p class="type">Mobile Apps</p>
+              </div>
             </li>
             <li class="feature">
               <img src="./images/img3.jpg" alt="Discovering" width="370" />
+              <div class="thumb">
+                <p class="type">Design solutions</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -393,5 +403,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-form">
+        <button class="modal-button" data-modal-close>
+          <svg class="icon">
+            <use href="/images/icons/new-optimized-icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
