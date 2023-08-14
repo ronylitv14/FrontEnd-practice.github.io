@@ -286,7 +286,10 @@ button {
 /* Button */
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
 
   font-size: 16px;
   font-weight: 700;
@@ -313,6 +316,15 @@ button {
   border-radius: 4px;
   color: var(--white-color);
   background-color: var(--accent-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button.primary:hover {
+  border-radius: 4px;
+  background: #188ce8;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .button.filter:hover,
@@ -632,6 +644,56 @@ footer .logo {
   text-transform: uppercase;
 }
 
+/* Foooter form */
+
+.mailing {
+  display: flex;
+
+  justify-content: baseline;
+  align-items: end;
+  margin-left: auto;
+}
+
+.mailing-label {
+  display: inline-flex;
+  flex-direction: column;
+
+  margin-right: 12px;
+}
+
+.mailing-title {
+  margin-bottom: 20px;
+
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+
+.mailing-label > .sign {
+  padding: 15px;
+
+  width: 358px;
+  height: auto;
+
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  color: var(--address-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25; /* 125% */
+  letter-spacing: 0.48px;
+}
+
+.mailing .icon {
+  margin-left: 10px;
+}
+
 /* Portfolio.hmtl */
 
 /* Products */
@@ -813,4 +875,168 @@ footer .logo {
 .modal-button .icon {
   width: 18px;
   height: 18px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button .icon:hover {
+  fill: var(--accent-color);
+}
+
+.form-container {
+  margin: 40px;
+}
+
+/* Modal form */
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  margin-bottom: 12px;
+
+  text-align: center;
+  color: var(--title-color);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 0.6px;
+}
+
+/* Form fields */
+
+.order-form .form-field {
+  display: inline-flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+
+  width: 100%;
+}
+
+.order-form .form-field.last {
+  margin-bottom: 20px;
+}
+
+/* Field property */
+
+.form-field .field-title {
+  margin-bottom: 4px;
+  color: var(--sec-text-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.12px;
+}
+
+.form-field .field-input {
+  padding: 12px;
+  padding-left: 42px;
+
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  outline: none;
+}
+
+.order-form:focus-within .field-input:focus {
+  border-color: var(--accent-color);
+}
+
+.field-input:focus + .icon {
+  fill: var(--accent-color);
+}
+
+.field-cont {
+  position: relative;
+  width: 100%;
+
+  border: none;
+}
+
+.field-cont .icon {
+  position: absolute;
+
+  top: 11px;
+  left: 12px;
+
+  fill: inherit;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Comment */
+
+.field-input.comment {
+  resize: none;
+  padding-left: 12px;
+
+  height: 120px;
+}
+
+/* Form button */
+
+.order-form .button {
+  align-self: center;
+}
+
+/* Form policy */
+
+.order-form .policy {
+  margin-bottom: 30px;
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+}
+
+.policy .agreement-link {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.policy-text {
+  color: var(--sec-text-color);
+  font-weight: 400;
+  line-height: 1.71; /* 171.429% */
+  letter-spacing: 0.42px;
+}
+
+/* Checkbox icon */
+
+.policy .agreement {
+  appearance: none;
+}
+
+.policy .icon {
+  display: inline-block;
+
+  box-sizing: content-box;
+
+  width: 16px;
+  height: 15px;
+
+  margin-right: 7px;
+
+  border-radius: 10%;
+  border-color: var(--logo-color);
+  border-style: solid;
+  border-width: 2px;
+}
+
+.policy .agreement:checked + .icon {
+  background-color: var(--accent-color);
+
+  border: 2px solid transparent;
+
+  background-image: url('../images/icons/icon-check.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }

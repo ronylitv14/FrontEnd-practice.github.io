@@ -112,7 +112,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="section-title">What do we do?</h2>
+          <h2 class="section-title">What are we doing?</h2>
           <ul class="features">
             <li class="feature">
               <img src="./images/img1.jpg" alt="Planning" width="370" />
@@ -401,15 +401,76 @@
             </li>
           </ul>
         </div>
+        <form class="mailing">
+          <label class="mailing-label">
+            <b class="mailing-title">Subscribe to the newsletter</b>
+            <input type="text" name="sign" placeholder="E-mail" class="sign" />
+          </label>
+          <button class="button primary">
+            Subscribe
+            <svg class="icon" width="24" height="24">
+              <use href="./images/icons/new-optimized-icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-form">
         <button class="modal-button" data-modal-close>
           <svg class="icon">
-            <use href="../images/icons/new-optimized-icons.svg#icon-close"></use>
+            <use href="./images/icons/new-optimized-icons.svg#icon-close"></use>
           </svg>
         </button>
+        <div class="form-container">
+          <form class="order-form" autocomplete="off">
+            <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+            <label class="form-field">
+              <span class="field-title">Name</span>
+              <div class="field-cont">
+                <input type="text" name="name" class="field-input" />
+                <svg class="icon" width="18px" height="18px">
+                  <use href="./images/icons/new-optimized-icons.svg#icon-person"></use>
+                </svg>
+              </div>
+            </label>
+            <label class="form-field">
+              <span class="field-title">Phone</span>
+              <div class="field-cont">
+                <input type="tel" name="tel" class="field-input" />
+                <svg class="icon" width="18px" height="18px">
+                  <use href="./images/icons/new-optimized-icons.svg#icon-phone-black"></use>
+                </svg>
+              </div>
+            </label>
+            <label class="form-field">
+              <span class="field-title">Email</span>
+              <div class="field-cont">
+                <input type="email" name="mail" class="field-input" />
+                <svg class="icon" width="18px" height="18px">
+                  <use href="./images/icons/new-optimized-icons.svg#icon-email-black"></use>
+                </svg>
+              </div>
+            </label>
+            <label class="form-field last">
+              <span class="field-title">Comments</span>
+              <textarea
+                name="comment"
+                class="field-input comment"
+                placeholder="Enter the text"
+              ></textarea>
+            </label>
+            <label class="policy">
+              <input type="checkbox" name="agreement" class="agreement" />
+              <span class="icon"></span>
+              <span class="policy-text"
+                >Соглашаюсь с рассылкой и принимаю
+                <a href="" class="agreement-link">Условия договора</a></span
+              >
+            </label>
+            <button type="submit" class="button primary">Send</button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>
