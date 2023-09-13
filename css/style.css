@@ -85,8 +85,6 @@ button {
 
   padding-left: 15px;
   padding-right: 15px;
-
-  /* outline: 2px dashed tomato; */
 }
 
 /* Sections */
@@ -162,13 +160,17 @@ button {
 
 .site-nav .item {
   position: relative;
-  display: block;
-  padding: 32px 0px;
 
   color: var(--title-color);
 
   font-weight: 500;
   line-height: 1.16;
+}
+
+.site-nav .link {
+  display: block;
+
+  padding: 32px 0px;
 }
 
 .site-nav .link[current]::after {
@@ -179,7 +181,6 @@ button {
   display: block;
   height: 4px;
   width: 100%;
-  background-color: tomato;
 
   border-radius: 2px;
   background: var(--accent-color);
